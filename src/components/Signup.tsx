@@ -43,7 +43,7 @@ const Signup: React.FC = () => {
     }
     try {
       await Auth.signUp({
-        username: email,
+        username: name,
         password: confirmPassword,
         attributes: {
           email,
