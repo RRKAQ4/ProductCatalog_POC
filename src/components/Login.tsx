@@ -32,7 +32,7 @@ const Signup: React.FC = () => {
     try {
       await Auth.signIn(email, password);
       Toast("Success!!", "Login Successfully", "success");
-      history.push("/");
+      history.push("/dashboard");
     } catch (error) {
       Toast("Error!!", error.message, "danger");
     }

@@ -32,6 +32,9 @@ const App: React.FC = () => {
           <Route path="/">
             <ProtectedRoute component={Dashboard} />
           </Route>
+          <Route path="/dashboard">
+            <Dashboard />
+          </Route>
         </Switch>
       </Card>
     </Router>
