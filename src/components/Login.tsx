@@ -52,8 +52,8 @@ const Signup: React.FC = () => {
         {" "}
         Sign in to an existing account
       </h1>
-      <Field label="Email" {...bindEmail} type="email" />
-      <Field label="Password" type="password" {...bindPassword} />
+      <Field label="EnterEmail" {...bindEmail} type="email" />
+      <Field label="EnterPassword" type="password" {...bindPassword} />
       <Button
         variant="contained"
         color="primary"
