@@ -22,7 +22,7 @@ const Signup: React.FC = () => {
 
   const history = useHistory();
 
-  const { value: email, bind: bindEmail } = useInput("");
+  const { value: username, bind: bindUsername } = useInput("");
   const { value: password, bind: bindPassword } = useInput("");
 
   const handleSubmit = async (e: React.SyntheticEvent<Element, Event>) => {
@@ -30,7 +30,7 @@ const Signup: React.FC = () => {
     setLoading(true);
 
     try {
-      await Auth.signIn(email, password);
+      await Auth.signIn(username, password);
       Toast("Success!!", "Login Successfully", "success");
       history.push("/dashboard");
     } catch (error) {
@@ -52,8 +52,8 @@ const Signup: React.FC = () => {
         {" "}
         Sign in to an existing account
       </h1>
-      <Field label="EnterEmail" {...bindEmail} type="email" />
-      <Field label="EnterPassword" type="password" {...bindPassword} />
+      <Field label="Enter UserName" {...bindUsername} />
+      <Field label="Enter Password" type="password" {...bindPassword} />
       <Button
         variant="contained"
         color="primary"
